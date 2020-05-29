@@ -4,6 +4,8 @@ namespace NiftyCorner\Limoncello\Spreadsheet\Package;
 
 use Limoncello\Contracts\Commands\ContainerConfiguratorInterface;
 use Limoncello\Contracts\Container\ContainerInterface;
+use PhpOffice\PhpSpreadsheet\Reader\Xlsx as XlsxReader;
+use Psr\Container\ContainerInterface as PsrContainerInterface;
 
 /**
  * @package NiftyCorner\Limoncello\Spreadsheet
@@ -18,5 +20,8 @@ class SpreadsheetContainerConfigurator implements ContainerConfiguratorInterface
      */
     public static function configureContainer(ContainerInterface $container): void
     {
+        $container[XlsxReader::class] = function (PsrContainerInterface $container) {
+            return new XlsxReader();
+        };
     }
 }
