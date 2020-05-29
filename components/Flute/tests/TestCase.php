@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace NiftyCorner\Limoncello\Test\Flute;
+namespace NiftyCorner\Limoncello\Tests\Flute;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DriverManager;

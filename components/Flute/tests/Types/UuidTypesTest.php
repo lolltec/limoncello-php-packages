@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace NiftyCorner\Limoncello\Test\Flute\Types;
+namespace NiftyCorner\Limoncello\Tests\Flute\Types;
 
 use Doctrine\DBAL\Types\Type;
 use NiftyCorner\Limoncello\Flute\Types\UuidType;
-use NiftyCorner\Limoncello\Test\Flute\TestCase;
+use NiftyCorner\Limoncello\Tests\Flute\TestCase;
 use Ramsey\Uuid\Uuid;
 
 /**
