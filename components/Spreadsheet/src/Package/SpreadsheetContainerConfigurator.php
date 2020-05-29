@@ -5,6 +5,8 @@ namespace NiftyCorner\Limoncello\Spreadsheet\Package;
 use Limoncello\Contracts\Commands\ContainerConfiguratorInterface;
 use Limoncello\Contracts\Container\ContainerInterface;
 use PhpOffice\PhpSpreadsheet\Reader\Xlsx as XlsxReader;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx as XlsxWriter;
 use Psr\Container\ContainerInterface as PsrContainerInterface;
 
 /**
@@ -22,6 +24,10 @@ class SpreadsheetContainerConfigurator implements ContainerConfiguratorInterface
     {
         $container[XlsxReader::class] = function (PsrContainerInterface $container) {
             return new XlsxReader();
+        };
+
+        $container[XlsxWriter::class] = function (PsrContainerInterface $container) {
+            return new XlsxWriter(new Spreadsheet());
         };
     }
 }
