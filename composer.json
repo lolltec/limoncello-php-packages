@@ -1,6 +1,6 @@
 {
     "name": "niftycorner/limoncello-php-packages",
-    "description": "PHP framework packages (PSR-7)",
+    "description": "PHP framework (PSR-7) packages",
     "keywords": ["framework", "PSR-7", "PSR7", "limoncello", "packages"],
     "homepage": "https://github.com/niftycorner/limoncello-php-packages",
     "support": {
