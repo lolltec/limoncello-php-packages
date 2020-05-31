@@ -1,13 +1,13 @@
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/niftycorner/limoncello-php-flute/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/niftycorner/limoncello-php-flute/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/niftycorner/limoncello-php-flute/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/niftycorner/limoncello-php-flute/?branch=master)
-[![Build Status](https://travis-ci.org/niftycorner/limoncello-php-flute.svg?branch=master)](https://travis-ci.org/niftycorner/limoncello-php-flute)
-[![License](https://img.shields.io/github/license/niftycorner/limoncello-php-packages.svg)](https://packagist.org/packages/niftycorner/limoncello-php-packages)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/niftycorner/limoncello-php-package-flute/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/niftycorner/limoncello-php-package-flute/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/niftycorner/limoncello-php-package-flute/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/niftycorner/limoncello-php-package-flute/?branch=master)
+[![Build Status](https://travis-ci.org/niftycorner/limoncello-php-package-flute.svg?branch=master)](https://travis-ci.org/niftycorner/limoncello-php-package-flute)
+[![License](https://img.shields.io/github/license/limoncello-php/framework.svg)](https://packagist.org/packages/limoncello-php/framework)
 
 ## Summary
 
-This is JSON API implementation package for [Limoncello Framework](https://github.com/limoncello-php/framework).
+This is JSON API implementation component for [Limoncello Framework](https://github.com/limoncello-php/framework).
 
-[More info](https://github.com/niftycorner/limoncello-php-packages).
+[More info](https://github.com/limoncello-php/framework).
 
 ## Testing
 

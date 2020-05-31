@@ -1,0 +1,37 @@
+{
+    "name": "niftycorner/limoncello-php-package-contracts",
+    "description": "Limoncello PHP Framework Contracts (interfaces) required for components integration.",
+    "keywords": ["limoncello", "framework", "contracts", "interfaces"],
+    "homepage": "https://github.com/niftycorner/limoncello-php-packages/tree/master/components/Contracts",
+    "support": {
+        "issues": "https://github.com/niftycorner/limoncello-php-packages/issues"
+    },
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "niftycorner",
+            "email": "info@niftycorner.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "limoncello-php/contracts": "^0.10.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^2.9",
+        "phpmd/phpmd": "^2.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "NiftyCorner\\Limoncello\\Contracts\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": ["@test-cs", "@test-md"],
+        "test-cs": "./vendor/bin/phpcs -p -s --standard=PSR2 ./src",
+        "test-md": "./vendor/bin/phpmd ./src text codesize,controversial,cleancode,design,unusedcode,naming"
+    },
+    "extra": {},
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
