@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace NiftyCorner\Limoncello\Templates\Package;
+namespace Lolltec\Limoncello\Templates\Package;
 
 use Limoncello\Contracts\Application\ApplicationConfigurationInterface as A;
 use Limoncello\Contracts\Settings\Packages\TemplatesSettingsInterface;
@@ -17,7 +17,7 @@ use function realpath;
 use function str_replace;
 
 /**
- * @package NiftyCorner\Limoncello\Templates
+ * @package Lolltec\Limoncello\Templates
  */
 class JsFrameworkTemplatesSettings implements TemplatesSettingsInterface
 {

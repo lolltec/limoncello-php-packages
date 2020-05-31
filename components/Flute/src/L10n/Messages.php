@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace NiftyCorner\Limoncello\Flute\L10n;
+namespace Lolltec\Limoncello\Flute\L10n;
 
 /**
- * @package NiftyCorner\Limoncello\Flute
+ * @package Lolltec\Limoncello\Flute
  */
 interface Messages extends \Limoncello\Flute\L10n\Messages
 {

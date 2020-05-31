@@ -1,16 +1,16 @@
 {
-    "name": "niftycorner/limoncello-php-package-data",
+    "name": "lolltec/limoncello-php-package-data",
     "description": "Data library for Limoncello PHP framework.",
     "keywords": ["limoncello", "framework", "data", "migration", "seed"],
-    "homepage": "https://github.com/niftycorner/limoncello-php-packages/tree/master/components/Data",
+    "homepage": "https://github.com/lolltec/limoncello-php-packages/tree/master/components/Data",
     "support": {
-        "issues": "https://github.com/niftycorner/limoncello-php-packages/issues"
+        "issues": "https://github.com/lolltec/limoncello-php-packages/issues"
     },
     "license": "Apache-2.0",
     "authors": [
         {
-            "name": "niftycorner",
-            "email": "info@niftycorner.com"
+            "name": "lolltec",
+            "email": "info@lolltec.com"
         }
     ],
     "require": {
@@ -26,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "NiftyCorner\\Limoncello\\Data\\": "src/"
+            "Lolltec\\Limoncello\\Data\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "NiftyCorner\\Limoncello\\Tests\\Data\\": "tests/"
+            "Lolltec\\Limoncello\\Tests\\Data\\": "tests/"
         }
     },
     "scripts": {

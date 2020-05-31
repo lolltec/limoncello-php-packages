@@ -1,11 +1,11 @@
 <?php declare (strict_types=1);
 
-namespace NiftyCorner\Limoncello\Templates\Contracts;
+namespace Lolltec\Limoncello\Templates\Contracts;
 
 use Limoncello\Templates\Contracts\TemplatesCacheInterface;
 
 /**
- * @package NiftyCorner\Limoncello\Templates
+ * @package Lolltec\Limoncello\Templates
  */
 interface JsFrameworkTemplatesCacheInterface extends TemplatesCacheInterface
 {

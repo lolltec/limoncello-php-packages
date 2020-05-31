@@ -1,15 +1,15 @@
 <?php declare(strict_types=1);
 
-namespace NiftyCorner\Limoncello\Flute\Validation\JsonApi\Rules;
+namespace Lolltec\Limoncello\Flute\Validation\JsonApi\Rules;
 
 use Limoncello\Validation\Contracts\Execution\ContextInterface;
 use Limoncello\Validation\Rules\ExecuteRule;
-use NiftyCorner\Limoncello\Flute\Contracts\Validation\ErrorCodes;
-use NiftyCorner\Limoncello\Flute\L10n\Messages;
+use Lolltec\Limoncello\Flute\Contracts\Validation\ErrorCodes;
+use Lolltec\Limoncello\Flute\L10n\Messages;
 use Ramsey\Uuid\Validator\ValidatorInterface as UuidValidatorInterface;
 
 /**
- * @package NiftyCorner\Limoncello\Flute
+ * @package Lolltec\Limoncello\Flute
  */
 final class IsValidUuidRule extends ExecuteRule
 {

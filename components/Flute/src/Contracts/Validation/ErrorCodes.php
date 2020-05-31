@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace NiftyCorner\Limoncello\Flute\Contracts\Validation;
+namespace Lolltec\Limoncello\Flute\Contracts\Validation;
 
 /**
- * @package NiftyCorner\Limoncello\Flute
+ * @package Lolltec\Limoncello\Flute
  */
 interface ErrorCodes extends \Limoncello\Validation\Contracts\Errors\ErrorCodes
 {

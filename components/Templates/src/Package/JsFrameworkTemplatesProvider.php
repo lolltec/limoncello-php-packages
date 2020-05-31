@@ -1,13 +1,13 @@
 <?php declare(strict_types=1);
 
-namespace NiftyCorner\Limoncello\Templates\Package;
+namespace Lolltec\Limoncello\Templates\Package;
 
 use Limoncello\Contracts\Provider\ProvidesCommandsInterface;
 use Limoncello\Contracts\Provider\ProvidesContainerConfiguratorsInterface;
-use NiftyCorner\Limoncello\Templates\Commands\JsFrameworkTemplatesCommand;
+use Lolltec\Limoncello\Templates\Commands\JsFrameworkTemplatesCommand;
 
 /**
- * @package NiftyCorner\Limoncello\Templates
+ * @package Lolltec\Limoncello\Templates
  */
 class JsFrameworkTemplatesProvider implements ProvidesContainerConfiguratorsInterface, ProvidesCommandsInterface
 {

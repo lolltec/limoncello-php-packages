@@ -1,26 +1,26 @@
 {
-    "name": "niftycorner/limoncello-php-packages",
+    "name": "lolltec/limoncello-php-packages",
     "description": "PHP framework (PSR-7) packages",
     "keywords": ["framework", "PSR-7", "PSR7", "limoncello", "packages"],
-    "homepage": "https://github.com/niftycorner/limoncello-php-packages",
+    "homepage": "https://github.com/lolltec/limoncello-php-packages",
     "support": {
-        "issues": "https://github.com/niftycorner/limoncello-php-packages/issues"
+        "issues": "https://github.com/lolltec/limoncello-php-packages/issues"
     },
     "license": "Apache-2.0",
     "authors": [
         {
-            "name": "niftycorner",
-            "email": "info@niftycorner.com"
+            "name": "lolltec",
+            "email": "info@lolltec.com"
         }
     ],
     "require": {
         "php": ">=7.1.0",
-        "niftycorner/limoncello-php-package-azure-ad": "self.version",
-        "niftycorner/limoncello-php-package-contracts": "self.version",
-        "niftycorner/limoncello-php-package-data": "self.version",
-        "niftycorner/limoncello-php-package-flute": "self.version",
-        "niftycorner/limoncello-php-package-spreadsheet": "self.version",
-        "niftycorner/limoncello-php-package-templates": "self.version"
+        "lolltec/limoncello-php-package-azure-ad": "self.version",
+        "lolltec/limoncello-php-package-contracts": "self.version",
+        "lolltec/limoncello-php-package-data": "self.version",
+        "lolltec/limoncello-php-package-flute": "self.version",
+        "lolltec/limoncello-php-package-spreadsheet": "self.version",
+        "lolltec/limoncello-php-package-templates": "self.version"
     },
     "scripts": {
         "test": ["@clean-vendor-folders", "@test-unit-with-coverage", "@test-cs", "@test-md"],

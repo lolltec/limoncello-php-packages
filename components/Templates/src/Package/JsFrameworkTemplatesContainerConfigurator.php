@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace NiftyCorner\Limoncello\Templates\Package;
+namespace Lolltec\Limoncello\Templates\Package;
 
 use Limoncello\Contracts\Application\ContainerConfiguratorInterface;
 use Limoncello\Contracts\Container\ContainerInterface as LimoncelloContainerInterface;
@@ -8,13 +8,13 @@ use Limoncello\Contracts\Settings\SettingsProviderInterface;
 use Limoncello\Contracts\Templates\TemplatesInterface;
 use Limoncello\Templates\Contracts\TemplatesCacheInterface;
 use Limoncello\Templates\TwigTemplates;
-use NiftyCorner\Limoncello\Contracts\Templates\JsFrameworkTemplatesInterface;
-use NiftyCorner\Limoncello\Templates\Contracts\JsFrameworkTemplatesCacheInterface;
-use NiftyCorner\Limoncello\Templates\Package\JsFrameworkTemplatesSettings as C;
+use Lolltec\Limoncello\Contracts\Templates\JsFrameworkTemplatesInterface;
+use Lolltec\Limoncello\Templates\Contracts\JsFrameworkTemplatesCacheInterface;
+use Lolltec\Limoncello\Templates\Package\JsFrameworkTemplatesSettings as C;
 use Psr\Container\ContainerInterface as PsrContainerInterface;
 
 /**
- * @package NiftyCorner\Limoncello\Templates
+ * @package Lolltec\Limoncello\Templates
  */
 class JsFrameworkTemplatesContainerConfigurator implements ContainerConfiguratorInterface
 {

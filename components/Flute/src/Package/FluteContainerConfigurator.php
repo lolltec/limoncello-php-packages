@@ -1,24 +1,24 @@
 <?php declare(strict_types=1);
 
-namespace NiftyCorner\Limoncello\Flute\Package;
+namespace Lolltec\Limoncello\Flute\Package;
 
 use Doctrine\DBAL\Types\Type;
 use Limoncello\Contracts\Container\ContainerInterface as LimoncelloContainerInterface;
-use NiftyCorner\Limoncello\Flute\Types\GeometryCollectionType;
-use NiftyCorner\Limoncello\Flute\Types\LineStringType;
-use NiftyCorner\Limoncello\Flute\Types\MultiPointType;
-use NiftyCorner\Limoncello\Flute\Types\MultiPolygonType;
-use NiftyCorner\Limoncello\Flute\Types\PointType;
-use NiftyCorner\Limoncello\Flute\Types\PolygonType;
-use NiftyCorner\Limoncello\Flute\Types\UuidType;
-use NiftyCorner\Limoncello\Flute\Types\MultiLineStringType;
+use Lolltec\Limoncello\Flute\Types\GeometryCollectionType;
+use Lolltec\Limoncello\Flute\Types\LineStringType;
+use Lolltec\Limoncello\Flute\Types\MultiPointType;
+use Lolltec\Limoncello\Flute\Types\MultiPolygonType;
+use Lolltec\Limoncello\Flute\Types\PointType;
+use Lolltec\Limoncello\Flute\Types\PolygonType;
+use Lolltec\Limoncello\Flute\Types\UuidType;
+use Lolltec\Limoncello\Flute\Types\MultiLineStringType;
 use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\UuidFactoryInterface;
 use Ramsey\Uuid\Validator\GenericValidator as UuidValidator;
 use Ramsey\Uuid\Validator\ValidatorInterface as UuidValidatorInterface;
 
 /**
- * @package NiftyCorner\Limoncello\Flute
+ * @package Lolltec\Limoncello\Flute
  */
 class FluteContainerConfigurator extends \Limoncello\Flute\Package\FluteContainerConfigurator
 {

@@ -1,16 +1,16 @@
 {
-    "name": "niftycorner/limoncello-php-package-templates",
+    "name": "lolltec/limoncello-php-package-templates",
     "description": "Limoncello application templates.",
     "keywords": ["limoncello", "framework", "templates"],
-    "homepage": "https://github.com/niftycorner/limoncello-php-packages/tree/master/components/Templates",
+    "homepage": "https://github.com/lolltec/limoncello-php-packages/tree/master/components/Templates",
     "support": {
-        "issues": "https://github.com/niftycorner/limoncello-php-packages/issues"
+        "issues": "https://github.com/lolltec/limoncello-php-packages/issues"
     },
     "license": "Apache-2.0",
     "authors": [
         {
-            "name": "niftycorner",
-            "email": "info@niftycorner.com"
+            "name": "lolltec",
+            "email": "info@lolltec.com"
         }
     ],
     "require": {
@@ -27,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "NiftyCorner\\Limoncello\\Templates\\": "src/"
+            "Lolltec\\Limoncello\\Templates\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "NiftyCorner\\Limoncello\\Tests\\Templates\\": "tests/"
+            "Lolltec\\Limoncello\\Tests\\Templates\\": "tests/"
         }
     },
     "scripts": {

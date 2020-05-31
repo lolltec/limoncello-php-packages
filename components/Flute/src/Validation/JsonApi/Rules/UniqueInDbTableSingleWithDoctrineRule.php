@@ -1,6 +1,6 @@
 <?php declare (strict_types=1);
 
-namespace NiftyCorner\Limoncello\Flute\Validation\JsonApi\Rules;
+namespace Lolltec\Limoncello\Flute\Validation\JsonApi\Rules;
 
 use Doctrine\DBAL\Connection;
 use Limoncello\Contracts\Session\SessionInterface;
@@ -10,7 +10,7 @@ use Limoncello\Validation\Contracts\Execution\ContextInterface;
 use Limoncello\Validation\Rules\ExecuteRule;
 
 /**
- * @package NiftyCorner\Limoncello\Flute
+ * @package Lolltec\Limoncello\Flute
  */
 class UniqueInDbTableSingleWithDoctrineRule extends ExecuteRule
 {

@@ -1,22 +1,22 @@
 <?php declare (strict_types=1);
 
-namespace NiftyCorner\Limoncello\Data\Migrations;
+namespace Lolltec\Limoncello\Data\Migrations;
 
 use Closure;
 use Doctrine\DBAL\Schema\Table;
 use Doctrine\DBAL\Types\Type;
 use Limoncello\Data\Contracts\MigrationContextInterface;
-use NiftyCorner\Limoncello\Flute\Types\GeometryCollectionType;
-use NiftyCorner\Limoncello\Flute\Types\LineStringType;
-use NiftyCorner\Limoncello\Flute\Types\MultiLineStringType;
-use NiftyCorner\Limoncello\Flute\Types\MultiPointType;
-use NiftyCorner\Limoncello\Flute\Types\MultiPolygonType;
-use NiftyCorner\Limoncello\Flute\Types\PointType;
-use NiftyCorner\Limoncello\Flute\Types\PolygonType;
-use NiftyCorner\Limoncello\Flute\Types\UuidType;
+use Lolltec\Limoncello\Flute\Types\GeometryCollectionType;
+use Lolltec\Limoncello\Flute\Types\LineStringType;
+use Lolltec\Limoncello\Flute\Types\MultiLineStringType;
+use Lolltec\Limoncello\Flute\Types\MultiPointType;
+use Lolltec\Limoncello\Flute\Types\MultiPolygonType;
+use Lolltec\Limoncello\Flute\Types\PointType;
+use Lolltec\Limoncello\Flute\Types\PolygonType;
+use Lolltec\Limoncello\Flute\Types\UuidType;
 
 /**
- * @package NiftyCorner\Limoncello\Data
+ * @package Lolltec\Limoncello\Data
  */
 trait MigrationTrait
 {

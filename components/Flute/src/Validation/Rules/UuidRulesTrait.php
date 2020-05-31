@@ -1,13 +1,13 @@
 <?php declare(strict_types=1);
 
-namespace NiftyCorner\Limoncello\Flute\Validation\Rules;
+namespace Lolltec\Limoncello\Flute\Validation\Rules;
 
 use Limoncello\Validation\Contracts\Rules\RuleInterface;
 use Limoncello\Validation\Rules\Generic\AndOperator;
-use NiftyCorner\Limoncello\Flute\Validation\JsonApi\Rules\IsValidUuidRule;
+use Lolltec\Limoncello\Flute\Validation\JsonApi\Rules\IsValidUuidRule;
 
 /**
- * @package NiftyCorner\Limoncello\Flute
+ * @package Lolltec\Limoncello\Flute
  */
 trait UuidRulesTrait
 {

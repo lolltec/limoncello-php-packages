@@ -1,16 +1,16 @@
 {
-    "name": "niftycorner/limoncello-php-package-contracts",
+    "name": "lolltec/limoncello-php-package-contracts",
     "description": "Limoncello PHP Framework Contracts (interfaces) required for components integration.",
     "keywords": ["limoncello", "framework", "contracts", "interfaces"],
-    "homepage": "https://github.com/niftycorner/limoncello-php-packages/tree/master/components/Contracts",
+    "homepage": "https://github.com/lolltec/limoncello-php-packages/tree/master/components/Contracts",
     "support": {
-        "issues": "https://github.com/niftycorner/limoncello-php-packages/issues"
+        "issues": "https://github.com/lolltec/limoncello-php-packages/issues"
     },
     "license": "Apache-2.0",
     "authors": [
         {
-            "name": "niftycorner",
-            "email": "info@niftycorner.com"
+            "name": "lolltec",
+            "email": "info@lolltec.com"
         }
     ],
     "require": {
@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "NiftyCorner\\Limoncello\\Contracts\\": "src/"
+            "Lolltec\\Limoncello\\Contracts\\": "src/"
         }
     },
     "scripts": {

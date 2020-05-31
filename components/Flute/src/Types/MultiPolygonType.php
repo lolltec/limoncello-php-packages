@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace NiftyCorner\Limoncello\Flute\Types;
+namespace Lolltec\Limoncello\Flute\Types;
 
 /**
- * @package NiftyCorner\Limoncello\Flute
+ * @package Lolltec\Limoncello\Flute
  */
 class MultiPolygonType extends \Brick\Geo\Doctrine\Types\MultiPolygonType
 {

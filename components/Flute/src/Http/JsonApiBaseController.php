@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace NiftyCorner\Limoncello\Flute\Http;
+namespace Lolltec\Limoncello\Flute\Http;
 
 use Limoncello\Contracts\Session\SessionInterface;
 use Psr\Container\ContainerInterface;
@@ -8,7 +8,7 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
 /**
- * @package NiftyCorner\Limoncello\Flute
+ * @package Lolltec\Limoncello\Flute
  */
 abstract class JsonApiBaseController extends \Limoncello\Flute\Http\JsonApiBaseController
 {
