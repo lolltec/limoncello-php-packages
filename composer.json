@@ -63,7 +63,7 @@
         "test-unit-with-coverage-component-Data":             ["@update-component-Data", "@composer --working-dir=./components/Data/ test-unit-with-coverage"],
         "test-unit-with-coverage-component-Flute":            ["@update-component-Flute", "@composer --working-dir=./components/Flute/ test-unit-with-coverage"],
         "test-unit-with-coverage-component-Spreadsheet":         ["@update-component-Spreadsheet", "@composer --working-dir=./components/Spreadsheet/ test-unit-with-coverage"],
-        "test-unit-with-coverage-component-Templates":        ["@update-component-Templates", "@composer --working-dir=./components/Templates/ test-unit-with-coverage"]
+        "test-unit-with-coverage-component-Templates":        ["@update-component-Templates", "@composer --working-dir=./components/Templates/ test-unit-with-coverage"],
 
         "test-cs": [
             "@test-cs-component-AzureAd",
