@@ -17,6 +17,7 @@
         "php": ">=7.1.0",
         "niftycorner/limoncello-php-package-azure-ad": "self.version",
         "niftycorner/limoncello-php-package-contracts": "self.version",
+        "niftycorner/limoncello-php-package-data": "self.version",
         "niftycorner/limoncello-php-package-flute": "self.version",
         "niftycorner/limoncello-php-package-spreadsheet": "self.version",
         "niftycorner/limoncello-php-package-templates": "self.version"
@@ -26,6 +27,7 @@
 
         "clean-vendor-folders": [
             "php -r \"system('rm -rf ./components/AzureAd/vendor/');\"",
+            "php -r \"system('rm -rf ./components/Data/vendor/');\"",
             "php -r \"system('rm -rf ./components/Flute/vendor/');\"",
             "php -r \"system('rm -rf ./components/Spreadsheet/vendor/');\"",
             "php -r \"system('rm -rf ./components/Templates/vendor/');\""
@@ -33,27 +35,32 @@
 
         "test-unit": [
             "@test-unit-component-AzureAd",
+            "@test-unit-component-Data",
             "@test-unit-component-Flute",
             "@test-unit-component-Spreadsheet",
             "@test-unit-component-Templates"
         ],
         "test-unit-with-coverage": [
             "@test-unit-with-coverage-component-AzureAd",
+            "@test-unit-with-coverage-component-Data",
             "@test-unit-with-coverage-component-Flute",
             "@test-unit-with-coverage-component-Spreadsheet",
             "@test-unit-with-coverage-component-Templates"
         ],
         "update-component-AzureAd":      "@composer update --working-dir=./components/AzureAd/ --optimize-autoloader --quiet",
         "update-component-Contracts":        "@composer update --working-dir=./components/Contracts/ --optimize-autoloader --quiet",
+        "update-component-Data":             "@composer update --working-dir=./components/Data/ --optimize-autoloader --quiet",
         "update-component-Flute":            "@composer update --working-dir=./components/Flute/ --optimize-autoloader --quiet",
         "update-component-Spreadsheet":         "@composer update --working-dir=./components/Spreadsheet/ --optimize-autoloader --quiet",
         "update-component-Templates":        "@composer update --working-dir=./components/Templates/ --optimize-autoloader --quiet",
         "test-unit-component-AzureAd":      ["@update-component-AzureAd", "@composer --working-dir=./components/AzureAd/ test-unit"],
         "test-unit-component-Contracts":        ["@update-component-Contracts"],
+        "test-unit-component-Data":             ["@update-component-Data", "@composer --working-dir=./components/Data/ test-unit"],
         "test-unit-component-Flute":            ["@update-component-Flute", "@composer --working-dir=./components/Flute/ test-unit"],
         "test-unit-component-Spreadsheet":         ["@update-component-Spreadsheet", "@composer --working-dir=./components/Spreadsheet/ test-unit"],
         "test-unit-component-Templates":        ["@update-component-Templates", "@composer --working-dir=./components/Templates/ test-unit"],
         "test-unit-with-coverage-component-AzureAd":      ["@update-component-AzureAd", "@composer --working-dir=./components/AzureAd/ test-unit-with-coverage"],
+        "test-unit-with-coverage-component-Data":             ["@update-component-Data", "@composer --working-dir=./components/Data/ test-unit-with-coverage"],
         "test-unit-with-coverage-component-Flute":            ["@update-component-Flute", "@composer --working-dir=./components/Flute/ test-unit-with-coverage"],
         "test-unit-with-coverage-component-Spreadsheet":         ["@update-component-Spreadsheet", "@composer --working-dir=./components/Spreadsheet/ test-unit-with-coverage"],
         "test-unit-with-coverage-component-Templates":        ["@update-component-Templates", "@composer --working-dir=./components/Templates/ test-unit-with-coverage"]
@@ -61,12 +68,14 @@
         "test-cs": [
             "@test-cs-component-AzureAd",
             "@test-cs-component-Contracts",
+            "@test-cs-component-Data",
             "@test-cs-component-Flute",
             "@test-cs-component-Spreadsheet",
             "@test-cs-component-Templates"
         ],
         "test-cs-component-AzureAd":      "@composer test-cs --working-dir=./components/AzureAd/",
         "test-cs-component-Contracts":        ["@update-component-Contracts", "@composer test-cs --working-dir=./components/Contracts/"],
+        "test-cs-component-Data":             "@composer test-cs --working-dir=./components/Data/",
         "test-cs-component-Flute":            "@composer test-cs --working-dir=./components/Flute/",
         "test-cs-component-Spreadsheet":         "@composer test-cs --working-dir=./components/Spreadsheet/",
         "test-cs-component-Templates":        "@composer test-cs --working-dir=./components/Templates/"
@@ -74,12 +83,14 @@
         "test-md": [
             "@test-md-component-AzureAd",
             "@test-md-component-Contracts",
+            "@test-md-component-Data",
             "@test-md-component-Flute",
             "@test-md-component-Spreadsheet",
             "@test-md-component-Templates"
         ],
         "test-md-component-AzureAd":      "@composer test-md --working-dir=./components/AzureAd/",
         "test-md-component-Contracts":        ["@update-component-Contracts", "@composer test-md --working-dir=./components/Contracts/"],
+        "test-md-component-Data":             "@composer test-md --working-dir=./components/Data/",
         "test-md-component-Flute":            "@composer test-md --working-dir=./components/Flute/",
         "test-md-component-Spreadsheet":         "@composer test-md --working-dir=./components/Spreadsheet/",
         "test-md-component-Templates":        "@composer test-md --working-dir=./components/Templates/"
