@@ -4,7 +4,7 @@ namespace NiftyCorner\Limoncello\Flute\Validation\Rules;
 
 use Limoncello\Validation\Contracts\Rules\RuleInterface;
 use Limoncello\Validation\Rules\Generic\AndOperator;
-use NiftyCorner\Limoncello\Flute\Validation\JsonApi\Rules\UniqueInDbTableSingleWithDoctrineRule as DefaultUniqueInDbTableSingleWithDoctrineRule;
+use NiftyCorner\Limoncello\Flute\Validation\JsonApi\Rules\UniqueInDbTableSingleWithDoctrineRule;
 
 /**
  * @package NiftyCorner\Limoncello\Flute
@@ -12,7 +12,7 @@ use NiftyCorner\Limoncello\Flute\Validation\JsonApi\Rules\UniqueInDbTableSingleW
 trait DatabaseRulesTrait
 {
     use \Limoncello\Flute\Validation\Rules\DatabaseRulesTrait {
-        unique as unique;
+        unique as defaultUnique;
     }
 
     /**
@@ -30,7 +30,7 @@ trait DatabaseRulesTrait
         RuleInterface $next = null
     ): RuleInterface
     {
-        $primary = new DefaultUniqueInDbTableSingleWithDoctrineRule($tableName, $primaryName, $primaryKey);
+        $primary = new UniqueInDbTableSingleWithDoctrineRule($tableName, $primaryName, $primaryKey);
 
         return $next === null ?
             $primary :
