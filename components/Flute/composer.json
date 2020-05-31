@@ -1,5 +1,5 @@
 {
-    "name": "niftycorner/limoncello-php-flute",
+    "name": "niftycorner/limoncello-php-package-flute",
     "description": "Limoncello framework json-api support package.",
     "keywords": ["limoncello", "framework", "json-api", "flute", "package"],
     "homepage": "https://github.com/niftycorner/limoncello-php-packages/tree/master/components/Flute",
@@ -25,7 +25,7 @@
         "scrutinizer/ocular": "^1.4",
         "phpunit/phpunit": "^7.0",
         "mockery/mockery": "^1.0",
-        "limoncello-php/container": "^0.10.0",
+
         "fzaninotto/faker": "^1.7"
     },
     "autoload": {

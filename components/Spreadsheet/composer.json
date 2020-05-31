@@ -1,5 +1,5 @@
 {
-    "name": "niftycorner/limoncello-php-spreadsheet",
+    "name": "niftycorner/limoncello-php-package-spreadsheet",
     "description": "Limoncello framework spreadsheet support package.",
     "keywords": ["limoncello", "framework", "spreadsheet", "package"],
     "homepage": "https://github.com/niftycorner/limoncello-php-packages/tree/master/components/Flute",
@@ -24,7 +24,7 @@
         "phpunit/phpunit": "^7.0",
         "mockery/mockery": "^1.0",
         "limoncello-php/container": "^0.10.0",
-        "limoncello-php/contracts": "^0.10.0",
+        "niftycorner/limoncello-php-package-contracts": "dev-master",
         "fzaninotto/faker": "^1.7"
     },
     "autoload": {
