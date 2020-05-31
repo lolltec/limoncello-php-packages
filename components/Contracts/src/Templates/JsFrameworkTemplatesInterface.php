@@ -7,7 +7,7 @@ use Limoncello\Contracts\Templates\TemplatesInterface;
 /**
  * @package NiftyCorner\Limoncello\Contracts
  */
-interface JsTemplateInterface extends TemplatesInterface
+interface JsFrameworkTemplatesInterface extends TemplatesInterface
 {
 
 }
