@@ -16,7 +16,7 @@
     "require": {
         "php": ">=7.1.0",
         "limoncello-php/templates": "^0.10.0",
-        "limoncello-php/contracts": "^0.10.0"
+        "lolltec/limoncello-php-package-contracts": "dev-master"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^2.9",
