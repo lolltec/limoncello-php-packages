@@ -78,7 +78,7 @@
         "test-cs-component-Data":             "@composer test-cs --working-dir=./components/Data/",
         "test-cs-component-Flute":            "@composer test-cs --working-dir=./components/Flute/",
         "test-cs-component-Spreadsheet":         "@composer test-cs --working-dir=./components/Spreadsheet/",
-        "test-cs-component-Templates":        "@composer test-cs --working-dir=./components/Templates/"
+        "test-cs-component-Templates":        "@composer test-cs --working-dir=./components/Templates/",
 
         "test-md": [
             "@test-md-component-AzureAd",
