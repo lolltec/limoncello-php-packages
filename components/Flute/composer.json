@@ -30,8 +30,7 @@
     },
     "autoload": {
         "psr-4": {
-            "NiftyCorner\\Limoncello\\Flute\\": "src/",
-            "NiftyCorner\\Limoncello\\Flute\\Resources\\Messages\\": "res/Messages"
+            "NiftyCorner\\Limoncello\\Flute\\": "src/"
         }
     },
     "autoload-dev": {
