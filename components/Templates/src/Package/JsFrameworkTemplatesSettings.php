@@ -81,7 +81,7 @@ class JsFrameworkTemplatesSettings implements TemplatesSettingsInterface
         return [
             static::KEY_IS_DEBUG            => $isDebug,
             static::KEY_IS_AUTO_RELOAD      => $isDebug,
-            static::KEY_TEMPLATES_FILE_MASK => '*.twig',
+            static::KEY_TEMPLATES_FILE_MASK => '*.html',
         ];
     }
 
