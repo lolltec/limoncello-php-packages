@@ -18,7 +18,7 @@ class JsFrameworkTemplatesCommand extends TemplatesCommand
     /**
      * Command name.
      */
-    const NAME = 'l:js-framework-template';
+    const NAME = 'l:js-framework-templates';
 
     /**
      * @inheritDoc
