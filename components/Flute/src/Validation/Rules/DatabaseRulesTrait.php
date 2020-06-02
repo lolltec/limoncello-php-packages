@@ -23,7 +23,7 @@ trait DatabaseRulesTrait
      *
      * @return RuleInterface
      */
-    protected static function defaultUnique(
+    protected static function unique(
         string $tableName,
         string $primaryName,
         ?string $primaryKey = null,
