@@ -2,6 +2,7 @@
 
 namespace Lolltec\Limoncello\Flute\Http;
 
+use Limoncello\Contracts\Session\SessionInterface;
 use Lolltec\Limoncello\Flute\Contracts\Http\Route\KeyIndexInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -21,9 +22,12 @@ abstract class JsonApiBaseController extends \Limoncello\Flute\Http\JsonApiBaseC
         ServerRequestInterface $request
     ): ResponseInterface
     {
-        /** @var KeyIndexInterface $routeKeyIndex */
-        $routeKeyIndex = $container->get(KeyIndexInterface::class);
-        $routeKeyIndex->setValue($routeParams[static::ROUTE_KEY_INDEX]);
+//        /** @var KeyIndexInterface $routeKeyIndex */
+//        $routeKeyIndex = $container->get(KeyIndexInterface::class);
+//        $routeKeyIndex->setValue($routeParams[static::ROUTE_KEY_INDEX]);
+
+        $session = $container->get(SessionInterface::class);
+        $session['route_key_index'] = $routeParams[static::ROUTE_KEY_INDEX];
 
         return parent::update($routeParams, $container, $request);
     }

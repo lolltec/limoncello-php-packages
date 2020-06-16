@@ -3,6 +3,7 @@
 namespace Lolltec\Limoncello\Flute\Validation\JsonApi\Rules;
 
 use Doctrine\DBAL\Connection;
+use Limoncello\Contracts\Session\SessionInterface;
 use Limoncello\Flute\Contracts\Validation\ErrorCodes;
 use Limoncello\Flute\L10n\Messages;
 use Limoncello\Validation\Contracts\Execution\ContextInterface;
@@ -65,11 +66,20 @@ class UniqueInDbTableSingleWithDoctrineRule extends ExecuteRule
 
             $fetched = $statement->execute()->fetch();
 
-            /** @var KeyIndexInterface $routeKeyIndex */
-            $keyIndex = $context->getContainer()->get(KeyIndexInterface::class);
+//            /** @var KeyIndexInterface $routeKeyIndex */
+//            $keyIndex = $context->getContainer()->get(KeyIndexInterface::class);
+
+            /** @var SessionInterface $session */
+            $session = $context->getContainer()->get(SessionInterface::class);
+
+            $routeKeyIndex = $session['route_key_inedex'];
+
+//            $found = isset($primaryKey) ?
+//                $fetched !== false && $fetched[$primaryKey] !== $keyIndex->getValue() :
+//                $fetched !== false;
 
             $found = isset($primaryKey) ?
-                $fetched !== false && $fetched[$primaryKey] !== $keyIndex->getValue() :
+                $fetched !== false && $fetched[$primaryKey] !== $routeKeyIndex :
                 $fetched !== false;
         }
 

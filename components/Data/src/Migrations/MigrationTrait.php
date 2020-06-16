@@ -6,6 +6,7 @@ use Closure;
 use Doctrine\DBAL\Schema\Table;
 use Doctrine\DBAL\Types\Type;
 use Limoncello\Data\Contracts\MigrationContextInterface;
+use Lolltec\Limoncello\Contracts\Data\UuidFields;
 use Lolltec\Limoncello\Flute\Types\GeometryCollectionType;
 use Lolltec\Limoncello\Flute\Types\LineStringType;
 use Lolltec\Limoncello\Flute\Types\MultiLineStringType;
@@ -339,6 +340,18 @@ trait MigrationTrait
     {
         return function (Table $table) use ($name) {
             $table->addColumn($name, GeometryCollectionType::NAME)->setNotnull(false);
+        };
+    }
+
+    /**
+     * @return Closure
+     */
+    protected function defaultUuid(): Closure
+    {
+        return function (Table $table) {
+            $uuid = UuidFields::FIELD_UUID;
+
+            $table->addColumn($uuid, UuidType::NAME)->setNotnull(true);
         };
     }
 }
