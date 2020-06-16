@@ -128,6 +128,18 @@ trait MigrationTrait
     }
 
     /**
+     * @return Closure
+     */
+    protected function defaultUuid(): Closure
+    {
+        return function (Table $table) {
+            $uuid = UuidFields::FIELD_UUID;
+
+            $table->addColumn($uuid, UuidType::NAME)->setNotnull(true);
+        };
+    }
+
+    /**
      * @param string $name
      *
      * @return Closure
@@ -340,18 +352,6 @@ trait MigrationTrait
     {
         return function (Table $table) use ($name) {
             $table->addColumn($name, GeometryCollectionType::NAME)->setNotnull(false);
-        };
-    }
-
-    /**
-     * @return Closure
-     */
-    protected function defaultUuid(): Closure
-    {
-        return function (Table $table) {
-            $uuid = UuidFields::FIELD_UUID;
-
-            $table->addColumn($uuid, UuidType::NAME)->setNotnull(true);
         };
     }
 }
