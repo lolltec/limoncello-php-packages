@@ -4,6 +4,8 @@ namespace Lolltec\Limoncello\Flute\Package;
 
 use Doctrine\DBAL\Types\Type;
 use Limoncello\Contracts\Container\ContainerInterface as LimoncelloContainerInterface;
+use Lolltec\Limoncello\Flute\Contracts\Http\Route\KeyIndexInterface;
+use Lolltec\Limoncello\Flute\Http\Route\KeyIndex;
 use Lolltec\Limoncello\Flute\Types\GeometryCollectionType;
 use Lolltec\Limoncello\Flute\Types\LineStringType;
 use Lolltec\Limoncello\Flute\Types\MultiPointType;
@@ -35,6 +37,10 @@ class FluteContainerConfigurator extends \Limoncello\Flute\Package\FluteContaine
 
         $container[UuidValidatorInterface::class] = function (): UuidValidatorInterface {
             return new UuidValidator();
+        };
+
+        $container[KeyIndexInterface::class] = function(): KeyIndexInterface {
+            return new KeyIndex();
         };
 
         // register spatial types
