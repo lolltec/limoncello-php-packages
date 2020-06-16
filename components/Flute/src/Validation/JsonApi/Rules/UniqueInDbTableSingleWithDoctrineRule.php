@@ -8,7 +8,7 @@ use Limoncello\Flute\Contracts\Validation\ErrorCodes;
 use Limoncello\Flute\L10n\Messages;
 use Limoncello\Validation\Contracts\Execution\ContextInterface;
 use Limoncello\Validation\Rules\ExecuteRule;
-use Lolltec\Limoncello\Flute\Contracts\Http\Route\KeyIndexInterface;
+use Lolltec\Limoncello\Contracts\Route\RouteKeyIndexInterface;
 
 /**
  * @package Lolltec\Limoncello\Flute
@@ -50,11 +50,11 @@ class UniqueInDbTableSingleWithDoctrineRule extends ExecuteRule
         if (is_scalar($value) === true) {
             /** @var Connection $connection */
             $connection = $context->getContainer()->get(Connection::class);
-            $builder = $connection->createQueryBuilder();
+            $builder    = $connection->createQueryBuilder();
 
-            $tableName = $context->getProperties()->getProperty(static::PROPERTY_TABLE_NAME);
+            $tableName   = $context->getProperties()->getProperty(static::PROPERTY_TABLE_NAME);
             $primaryName = $context->getProperties()->getProperty(static::PROPERTY_PRIMARY_NAME);
-            $primaryKey = $context->getProperties()->getProperty(static::PROPERTY_PRIMARY_KEY);
+            $primaryKey  = $context->getProperties()->getProperty(static::PROPERTY_PRIMARY_KEY);
 
             $columnNames = isset($primaryKey) ? "`{$primaryKey}`, `{$primaryName}`" : "`{$primaryName}`";
 
@@ -66,17 +66,13 @@ class UniqueInDbTableSingleWithDoctrineRule extends ExecuteRule
 
             $fetched = $statement->execute()->fetch();
 
-//            /** @var KeyIndexInterface $routeKeyIndex */
-//            $keyIndex = $context->getContainer()->get(KeyIndexInterface::class);
-
             /** @var SessionInterface $session */
             $session = $context->getContainer()->get(SessionInterface::class);
 
-            $routeKeyIndex = $session['route_key_inedex'];
-
-//            $found = isset($primaryKey) ?
-//                $fetched !== false && $fetched[$primaryKey] !== $keyIndex->getValue() :
-//                $fetched !== false;
+            $routeKeyIndex =
+                isset($session[RouteKeyIndexInterface::PARAM_ROUTE_KEY_INDEX]) === true ?
+                    $session[RouteKeyIndexInterface::PARAM_ROUTE_KEY_INDEX] :
+                    null;
 
             $found = isset($primaryKey) ?
                 $fetched !== false && $fetched[$primaryKey] !== $routeKeyIndex :
