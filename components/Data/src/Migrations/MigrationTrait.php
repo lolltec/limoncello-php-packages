@@ -354,4 +354,16 @@ trait MigrationTrait
             $table->addColumn($name, GeometryCollectionType::NAME)->setNotnull(false);
         };
     }
+
+    /**
+     * @param string $name
+     *
+     * @return Closure
+     */
+    protected function nullableBool(string $name): Closure
+    {
+        return function (Table $table) use ($name) {
+            $column = $table->addColumn($name, Type::BOOLEAN)->setNotnull(false);
+        };
+    }
 }
