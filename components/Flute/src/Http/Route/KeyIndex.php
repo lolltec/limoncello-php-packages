@@ -2,13 +2,25 @@
 
 namespace Lolltec\Limoncello\Flute\Http\Route;
 
+use Limoncello\Container\Traits\HasContainerTrait;
 use Lolltec\Limoncello\Flute\Contracts\Http\Route\KeyIndexInterface;
+use Psr\Container\ContainerInterface as PsrContainerInterface;
 
 /**
  * @package Lolltec\Limoncello\Flute
  */
 class KeyIndex implements KeyIndexInterface
 {
+    use HasContainerTrait;
+
+    /**
+     * @inheritDoc
+     */
+    public function __construct(PsrContainerInterface $container)
+    {
+        $this->setContainer($container);
+    }
+
     /**
      * @var
      */
