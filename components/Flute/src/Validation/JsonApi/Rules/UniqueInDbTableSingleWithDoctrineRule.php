@@ -7,7 +7,7 @@ use Limoncello\Flute\Contracts\Validation\ErrorCodes;
 use Limoncello\Flute\L10n\Messages;
 use Limoncello\Validation\Contracts\Execution\ContextInterface;
 use Limoncello\Validation\Rules\ExecuteRule;
-use Lolltec\Limoncello\Flute\Contracts\Http\Route\KeyIndexInterface;
+use Lolltec\Limoncello\Flute\Contracts\Http\Route\RouteKeyIndexInterface;
 
 /**
  * @package Lolltec\Limoncello\Flute
@@ -29,8 +29,12 @@ class UniqueInDbTableSingleWithDoctrineRule extends ExecuteRule
 
     /**
      * @inheritDoc
+     *
+     * @param string      $tableName
+     * @param string      $primaryName
+     * @param string|null $primaryKey
      */
-    public function __construct(string $tableName, string $primaryName, ?string $primaryKey = null)
+    public function __construct(string $tableName, string $primaryName, string $primaryKey = null)
     {
         parent::__construct([
             static::PROPERTY_TABLE_NAME   => $tableName,
@@ -55,7 +59,7 @@ class UniqueInDbTableSingleWithDoctrineRule extends ExecuteRule
             $primaryName = $context->getProperties()->getProperty(static::PROPERTY_PRIMARY_NAME);
             $primaryKey  = $context->getProperties()->getProperty(static::PROPERTY_PRIMARY_KEY);
 
-            $columnNames = isset($primaryKey) ? "`{$primaryKey}`, `{$primaryName}`" : "`{$primaryName}`";
+            $columnNames = isset($primaryKey) === true ? "`{$primaryKey}`, `{$primaryName}`" : "`{$primaryName}`";
 
             $statement = $builder
                 ->select($columnNames)
@@ -65,10 +69,10 @@ class UniqueInDbTableSingleWithDoctrineRule extends ExecuteRule
 
             $fetched = $statement->execute()->fetch();
 
-            /** @var KeyIndexInterface $routeKeyIndex */
-            $keyIndex = $context->getContainer()->get(KeyIndexInterface::class);
+            /** @var RouteKeyIndexInterface $routeKeyIndex */
+            $keyIndex = $context->getContainer()->get(RouteKeyIndexInterface::class);
 
-            $found = isset($primaryKey) ?
+            $found = isset($primaryKey) === true ?
                 $fetched !== false && $fetched[$primaryKey] !== $keyIndex->getValue() :
                 $fetched !== false;
         }
