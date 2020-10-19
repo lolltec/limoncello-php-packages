@@ -14,6 +14,7 @@ use Lolltec\Limoncello\Flute\Types\PointType;
 use Lolltec\Limoncello\Flute\Types\PolygonType;
 use Lolltec\Limoncello\Flute\Types\UuidType;
 use Lolltec\Limoncello\Flute\Types\MultiLineStringType;
+use Psr\Container\ContainerInterface as PsrContainerInterface;
 use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\UuidFactoryInterface;
 use Ramsey\Uuid\Validator\GenericValidator as UuidValidator;
@@ -39,8 +40,8 @@ class FluteContainerConfigurator extends \Limoncello\Flute\Package\FluteContaine
             return new UuidValidator();
         };
 
-        $container[KeyIndexInterface::class] = function(): KeyIndexInterface {
-            return new KeyIndex();
+        $container[KeyIndexInterface::class] = function(PsrContainerInterface $container): KeyIndexInterface {
+            return new KeyIndex($container);
         };
 
         // register spatial types
