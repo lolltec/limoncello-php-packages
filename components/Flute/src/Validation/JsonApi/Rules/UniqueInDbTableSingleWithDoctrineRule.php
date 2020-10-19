@@ -9,6 +9,7 @@ use Limoncello\Flute\L10n\Messages;
 use Limoncello\Validation\Contracts\Execution\ContextInterface;
 use Limoncello\Validation\Rules\ExecuteRule;
 use Lolltec\Limoncello\Contracts\Route\RouteKeyIndexInterface;
+use Lolltec\Limoncello\Flute\Contracts\Http\Route\KeyIndexInterface;
 
 /**
  * @package Lolltec\Limoncello\Flute
@@ -66,16 +67,11 @@ class UniqueInDbTableSingleWithDoctrineRule extends ExecuteRule
 
             $fetched = $statement->execute()->fetch();
 
-            /** @var SessionInterface $session */
-            $session = $context->getContainer()->get(SessionInterface::class);
-
-            $routeKeyIndex =
-                isset($session[RouteKeyIndexInterface::PARAM_ROUTE_KEY_INDEX]) === true ?
-                    $session[RouteKeyIndexInterface::PARAM_ROUTE_KEY_INDEX] :
-                    null;
+            /** @var KeyIndexInterface $routeKeyIndex */
+            $keyIndex = $context->getContainer()->get(KeyIndexInterface::class);
 
             $found = isset($primaryKey) ?
-                $fetched !== false && $fetched[$primaryKey] !== $routeKeyIndex :
+                $fetched !== false && $fetched[$primaryKey] !== $keyIndex->getValue() :
                 $fetched !== false;
         }
 
